@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { gameSubject } from './Game'
 import Board from './Board'
+import './App.css'
 
 export default function App() {
   const [board, setBoard] = useState([])
@@ -11,8 +12,10 @@ export default function App() {
   }, [])
 
   return (
-    <div>
-      <Board board={board}/>
+    <div className='container'>
+      <div className='board-container'>
+        <Board board={board}/>
+      </div>
     </div>
   )
-}
+} 
